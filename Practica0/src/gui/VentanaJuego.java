@@ -55,6 +55,34 @@ public class VentanaJuego extends JFrame {
 		getContentPane().add(pCentral,BorderLayout.CENTER);
 		
 		
+		bGiraIzq.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				c1.giro(3);
+				
+			}
+		});
+		
+		bGiraDer.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				c1.giro(-3);
+				
+			}
+		});
+		
+		
+		bFrena.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				if(c1.getMiVelocidad()>0)
+					c1.acelera(-0.5);
+				
+			}
+		});
 		
 		bAcelera.addActionListener(new ActionListener() {
 			
